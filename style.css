@@ -1,0 +1,127 @@
+
+/* 1. Variables CSS */
+:root {
+    /* Colores */
+    --color-principal: #080808;       /* negro para franja del logo */
+    --color-secundario: rgb(248, 236, 236); /* fondo general blanco */
+    --color-texto: rgb(12, 12, 12);   /* texto principal */
+    --color-enlace: #fcafe2;          /* enlaces */
+    --color-footer: #222222;          /* fondo del footer */
+
+    /* Colores de títulos por nivel */
+    --color-h1: #35bdcf;
+    --color-h2: #5be97f;
+    --color-h3: #080808;
+
+    /* Tipografía */
+    --fuente-principal: 'Roboto', sans-serif;
+    --tamano-h1: 2.5rem;
+    --tamano-h2: 2rem;
+    --tamano-h3: 1.5rem;
+    --tamano-texto: 1rem;
+
+    /* Espaciado */
+    --margen-seccion: 2rem;
+    --padding-general: 1rem;
+}
+
+/* 2. Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Tipografía global y body */
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-texto);
+    color: var(--color-texto);
+    background-color: var(--color-secundario);
+    line-height: 1.5;
+}
+
+/* 4. Encabezados */
+h1 { font-size: var(--tamano-h1); color: var(--color-h1); }
+h2 { font-size: var(--tamano-h2); color: var(--color-h2); }
+h3 { font-size: var(--tamano-h3); color: var(--color-h3); }
+
+/* 5. Enlaces */
+a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 6. Listas básicas */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+/* 7. Imágenes responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 8. Header y navegación */
+
+/* Header como franja negra completa */
+header {
+    background-color: var(--color-principal); /* franja negra */
+    padding: 1.5rem 1rem; /* alto de la franja */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px; /* opcional */
+}
+
+/* Imagen del logo */
+.logo-container img {
+    display: block;
+    background-color: var(--color-principal); /* negro para PNG transparente */
+}
+
+/* Lista de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Enlaces del nav */
+nav ul li a {
+    color: #ffffff; /* blanco sobre la franja negra */
+    font-weight: bold;
+}
+
+/* Responsive: menú vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .logo-container {
+        margin-bottom: 1rem;
+    }
+}
