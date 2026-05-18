@@ -45,15 +45,6 @@ h1 { font-size: var(--tamano-h1); color: var(--color-h1); }
 h2 { font-size: var(--tamano-h2); color: var(--color-h2); }
 h3 { font-size: var(--tamano-h3); color: var(--color-h3); }
 
-/* 5. Enlaces */
-a {
-    color: var(--color-enlace);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 /* 6. Listas básicas */
 ul, ol {
@@ -65,47 +56,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-/* 8. Header y navegación */
-
-/* Header como franja negra completa */
-header {
-    background-color: var(--color-principal); /* franja negra */
-    padding: 1.5rem 1rem; /* alto de la franja */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Contenedor del logo */
-.logo-container {
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 5px; /* opcional */
-}
-
-/* Imagen del logo */
-.logo-container img {
-    display: block;
-    background-color: var(--color-principal); /* negro para PNG transparente */
-}
-
-/* Lista de navegación */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-/* Enlaces del nav */
-nav ul li a {
-    color: #ffffff; /* blanco sobre la franja negra */
-    font-weight: bold;
-}
-
 /* Responsive: menú vertical en pantallas pequeñas */
 @media (max-width: 768px) {
     header {
@@ -123,4 +73,82 @@ nav ul li a {
     .logo-container {
         margin-bottom: 1rem;
     }
+}
+
+/*Parte de Iara*/
+section {
+    padding: 20px;
+} 
+
+h1 {
+    color: var(--color-h1);
+    font-size: var(--tamano-h1);
+}
+h2 {
+    color: var(--color-h2);
+    font-size: var(--tamano-h2);
+}
+p {
+    color: var(--color-texto);
+    font-size: var(--tamano-texto);
+}
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-texto);
+    color: var(--color-texto);
+    background-color: var(--color-secundario);
+    line-height: 1.5;
+}
+/* Header, footer y a:hover*/
+.logo {
+    width: 20%;
+    margin-left: 1rem;
+}
+#header {
+    background-color: var(--color-principal);
+    padding: var(--padding-general);
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-center;
+    align-items: center;
+}
+.navegacion ul {
+    display: flex;
+    gap: 2rem;
+}
+.navegacion ul li a {
+    text-decoration: none;
+}
+.navegacion ul li a:hover {
+    text-decoration: underline;
+}
+#footer {
+    background-color: var(--color-footer);
+    margin-top: 50px;
+}
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.redes-sociales li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.redes-sociales li a {
+    text-decoration: none;
+}
+
+.redes-sociales li a i {
+    font-size: 30px;
+}
+a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: salmon;
 }
