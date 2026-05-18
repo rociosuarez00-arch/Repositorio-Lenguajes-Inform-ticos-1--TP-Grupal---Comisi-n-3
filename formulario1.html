@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario adopcion</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🐱 Formulario Felino</h1>
+    <p class="subtitle">
+      Solicitud de adopción
+    </p>
+
+    <form>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" name="direccion">
+
+
+      <label for="sexo">Sexo del gato</label>
+      <select id="sexo" name="sexo">
+        <option value="">Seleccione</option>
+        <option value="macho">Macho</option>
+        <option value="hembra">Hembra</option>
+      </select>
+
+      <label for="comentarios">Comentarios adicionales</label>
+      <textarea
+        id="comentarios"
+        name="comentarios"
+        rows="5"
+        placeholder="Escriba información adicional aquí..."
+      ></textarea>
+
+      <button type="submit">
+        Enviar Solicitud
+      </button>
+
+    </form>
+
+    <div class="footer">
+      Gracias por ayudar a los gatos 🐾
+    </div>
+
+  </div>
+
+</body>
+
+</html>
