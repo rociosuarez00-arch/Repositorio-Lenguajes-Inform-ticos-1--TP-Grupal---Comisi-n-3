@@ -92,13 +92,7 @@ p {
     color: var(--color-texto);
     font-size: var(--tamano-texto);
 }
-body {
-    font-family: var(--fuente-principal);
-    font-size: var(--tamano-texto);
-    color: var(--color-texto);
-    background-color: var(--color-secundario);
-    line-height: 1.5;
-}
+
 /* Header, footer y a:hover*/
 .logo {
     width: 20%;
@@ -152,3 +146,79 @@ a:hover {
     text-decoration: underline;
     color: salmon;
 }
+ 
+/* formularios */
+  
+  /* estilo del contenedor del formulario*/
+    .container{
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+  /* estilo para el subtítulo del formulario*/
+    .subtitle{
+      text-align: center;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+   /* estilos para las etiquetas y campos del formulario*/
+    label{
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+   /* estilos para los campos de entrada, áreas de texto y selectores*/
+    input,
+    select,
+    textarea{
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    /* permitir que el área de texto se redimensione verticalmente, pero no horizontalmente*/
+    textarea{
+      resize: vertical;
+    }
+
+   /* estilos para el grupo de botones de opción */
+    .radio-group{
+      margin-top: 10px;
+    }
+
+    /* estilos para las etiquetas dentro del grupo de botones de opción */
+    .radio-group label{
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+    }
+
+    /* estilos para los botones de opción */
+    button{
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      background: #ff7b54;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* efecto hover para el botón de envío */
+    button:hover{
+      background: #ff6333;
+    }
