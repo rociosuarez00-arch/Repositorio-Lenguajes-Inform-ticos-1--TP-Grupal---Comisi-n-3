@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,10 +35,10 @@
             <h2><strong>Nuestra misión</strong></h2>
             <p>Proporcionar un refugio seguro y amoroso a los felinos abandonados, fomentar la educación sobre la <em>tenencia responsable</em> de mascotas y promover la adopción de gatos a través de programas que ayuden a reducir la sobrepoblación animal.</p>
 
-            
             <img src="multimedia/exterior_ONG.jpg" alt="Fachada de Gatitos al Corazón - ONG" width="400">
             <img src="multimedia/interior_ONG.jpg" alt="Oficinas de Gatitos al Corazón - ONG" width="400">
             <img src="multimedia/sala_conferencia.jpg" alt="Sala conferencias de Gatitos al Corazón - ONG" width="400">
+            <br>
             <a href="#info">Ir a más información</a>
         </section>
 
@@ -65,35 +68,46 @@
             </article>
         </section>
 
-       
-        <section id="programas">
-            <h2>Nuestros Programas</h2>
-            <p>En Gatitos al Corazón, trabajamos en diversos programas para mejorar la vida de los felinos.</p>
+        <section id="programas" class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Nuestros Programas</h2>
+                    <p>En Gatitos al Corazón, trabajamos en diversos programas para mejorar la vida de los felinos.</p>
+                </div>
+            </div>
             
-            <div class="programa">
-                <h3>Vacunación</h3>
-                <img src="multimedia/gato_vacunado.jpg" alt="Programa de vacunación para gatos" width="200">
-                <p>Realizamos programas de vacunación para asegurar la salud de los gatos rescatados y adoptados.</p>
-            </div>
+            <div class="row g-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="programa">
+                        <h3>Vacunación</h3>
+                        <img src="multimedia/gato_vacunado.jpg" alt="Programa de vacunación para gatos" width="200" class="img-fluid">
+                        <p>Realizamos programas de vacunación para asegurar la salud de los gatos rescatados y adoptados.</p>
+                    </div>
+                </div>
 
-            <div class="programa">
-                <h3>Adopción</h3>
-                <img src="multimedia/adopcion_gato.jpg" alt="Gatos disponibles para adopción" width="200">
-                <p>Fomentamos la adopción responsable de gatos para darles un hogar amoroso.</p>
-            </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="programa">
+                        <h3>Adopción</h3>
+                        <img src="multimedia/adopcion_gato.jpg" alt="Gatos disponibles para adopción" width="200" class="img-fluid">
+                        <p>Fomentamos la adopción responsable de gatos para darles un hogar amoroso.</p>
+                    </div>
+                </div>
 
-            <div class="programa">
-                <h3>Castración</h3>
-                <img src="multimedia/gato_posoperatorio.jpg" alt="Programa de castración para gatos" width="200">
-                <p>Realizamos campañas de castración para controlar la sobrepoblación felina.</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="programa">
+                        <h3>Castración</h3>
+                        <img src="multimedia/gato_posoperatorio.jpg" alt="Programa de castración para gatos" width="200" class="img-fluid">
+                        <p>Realizamos campañas de castración para controlar la sobrepoblación felina.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <aside>
             <h3>¡Tu ayuda es vital!</h3>
             <p>Gracias al trabajo de nuestros voluntarios y tu apoyo, podemos hacer una diferencia. ¡Adoptar o ayudar a la causa salva vidas!</p>
-
-            
             <img src="multimedia/rescatando_gatitos.jpg" alt="Voluntarios ayudando en la ONG" width="200">
         </aside>
     </main>
@@ -124,5 +138,7 @@
             <p>© Todos los derechos reservados 2026 Gatitos al Corazón.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
