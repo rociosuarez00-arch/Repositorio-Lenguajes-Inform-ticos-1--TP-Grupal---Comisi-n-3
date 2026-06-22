@@ -222,3 +222,10 @@ a:hover {
     button:hover{
       background: #ff6333;
     }
+
+
+
+/* HEADER */
+.bg-secundario {
+  background-color: var(--color-secundario) !important;
+}
