@@ -61,7 +61,6 @@ img {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem;
     }
 
     nav ul {
@@ -95,27 +94,10 @@ p {
 
 /* Header, footer y a:hover*/
 .logo {
-    width: 20%;
+    width: 15%;
     margin-left: 1rem;
 }
-#header {
-    background-color: var(--color-principal);
-    padding: var(--padding-general);
-    padding-bottom: 5%;
-    display: flex;
-    justify-content: space-center;
-    align-items: center;
-}
-.navegacion ul {
-    display: flex;
-    gap: 2rem;
-}
-.navegacion ul li a {
-    text-decoration: none;
-}
-.navegacion ul li a:hover {
-    text-decoration: underline;
-}
+
 #footer {
     background-color: var(--color-footer);
     margin-top: 50px;
@@ -144,7 +126,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: salmon;
+    color: var(--color-texto);
 }
  
 /* formularios */
@@ -227,5 +209,8 @@ a:hover {
 
 /* HEADER */
 .bg-secundario {
-  background-color: var(--color-secundario) !important;
+    background-color:#f785ad !important;
+}
+.bg-principal {
+    background-color: var(--color-secundario) !important;;
 }
