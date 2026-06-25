@@ -2,7 +2,7 @@
 :root {
     /* Colores */
     --color-principal: #080808;       /* negro para franja del logo */
-    --color-secundario: rgb(248, 236, 236); /* fondo general blanco */
+    --color-secundario: white; /* fondo general blanco */
     --color-texto: rgb(12, 12, 12);   /* texto principal */
     --color-enlace: #fcafe2;          /* enlaces */
     --color-footer: #222222;          /* fondo del footer */
@@ -209,8 +209,8 @@ a:hover {
 
 /* HEADER */
 .bg-secundario {
-    background-color:#f785ad !important;
+    background-color: var(--color-principal) !important;
 }
 .bg-principal {
-    background-color: var(--color-secundario) !important;;
+    background-color: var(--color-secundario) !important;
 }
