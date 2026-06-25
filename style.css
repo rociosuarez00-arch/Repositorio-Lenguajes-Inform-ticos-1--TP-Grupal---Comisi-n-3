@@ -214,3 +214,56 @@ a:hover {
 .bg-principal {
     background-color: var(--color-secundario) !important;
 }
+
+/*/* =========================================
+   1. Header Sticky (Fijado en la parte superior)
+   ========================================= */
+.custom-sticky-header {
+  position: sticky; /* Cumple: El elemento se queda visible al hacer scroll */
+  top: 0;           /* Se ancla al borde superior de la pantalla */
+  z-index: 1050;    /* Mantiene el header por encima del resto del contenido (Bootstrap usa 1050 para navbars) */
+}
+
+/* =========================================
+   2. Hero Banner (Texto superpuesto)
+   ========================================= */
+.custom-hero-container {
+  position: relative; /* Cumple: Contenedor padre con position relative */
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-hero-overlay {
+  position: absolute; /* Cumple: Texto superpuesto con position absolute */
+  top: 50%;           /* Movemos al 50% de la altura del contenedor padre */
+  left: 50%;          /* Movemos al 50% del ancho del contenedor padre */
+  transform: translate(-50%, -50%); /* Centrado perfecto usando CSS */
+  
+  /* Estilos cosméticos adicionales */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente para garantizar que se lea el texto */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* =========================================
+   3. Badges e Íconos sobre imágenes
+   ========================================= */
+.custom-image-wrapper {
+  position: relative; /* El contenedor de la imagen ES el ancla para el badge */
+}
+
+.custom-badge {
+  position: absolute; /* Cumple: Etiqueta superpuesta a la imagen usando absolute */
+  top: 15px;          /* Distancia desde arriba */
+  right: 15px;        /* Distancia desde la derecha */
+  
+  /* Estilos cosméticos del badge */
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
