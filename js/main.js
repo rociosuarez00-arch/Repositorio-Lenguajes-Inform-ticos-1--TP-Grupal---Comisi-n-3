@@ -2,23 +2,21 @@
    MODO OSCURO
 ========================== */
 
-const boton = document.getElementById("btn-modo");
- 
-if (localStorage.getItem("modo") === "oscuro") {
-    document.body.classList.add("oscuro");
-}
-if (boton) {
-    boton.addEventListener("click", () => {
-        document.body.classList.toggle("oscuro");
- 
-        /* Guardar el estado actual en localStorage para que persista entre páginas */
-        if (document.body.classList.contains("oscuro")) {
-            localStorage.setItem("modo", "oscuro");
-        } else {
-            localStorage.setItem("modo", "claro");
-        }
-    });
-}
+// Buscamos el botón en el HTML usando su id ("btn-modo").
+const btnModo = document.getElementById("btn-modo");
+
+// Le decimos al botón: "cuando te hagan click, ejecutá esto".
+btnModo.addEventListener("click", () => {
+
+  // toggle alterna la clase "oscuro" en el body:
+  // si no está, la agrega; si ya está, la saca.
+  document.body.classList.toggle("oscuro");
+
+  // Preguntamos si el modo oscuro quedó activado (true o false)
+  // para cambiar el texto del botón según corresponda.
+  const modoActivo = document.body.classList.contains("oscuro");
+  btnModo.textContent = modoActivo ? "☀️ Modo claro" : "🌙 Modo oscuro";
+});
 
 /* ==========================
    VALIDACIÓN DEL NOMBRE

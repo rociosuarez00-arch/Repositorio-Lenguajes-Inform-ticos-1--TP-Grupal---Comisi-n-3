@@ -1,9 +1,9 @@
 /* 1. Variables CSS */
 :root {
     /* Colores */
-    --color-principal: #ffffff;       /* negro para franja del logo */
+    --color-principal: white;       /* negro para franja del logo */
     --color-secundario: white; /* fondo general blanco */
-    --color-texto: rgb(12, 12, 12);   /* texto principal */
+    --color-texto: black;   /* texto principal */
     --color-enlace: #fcafe2;          /* enlaces */
     --color-footer: #222222;          /* fondo del footer */
 
@@ -32,7 +32,7 @@
     --color-subtitle: #777;
 
     --color-principal-dark-mode: #1e1e1e;
-    --color-secundario-dark-mode: #121212;
+    --color-secundario-dark-mode: #1e1e1e;;
     --color-texto-dark-mode: #f0f0f0;
     --color-enlace-dark-mode: #f48fb1;
     --color-footer-dark-mode: #0a0a0a;
@@ -49,9 +49,17 @@
     --color-input-border-dark-mode: #555555;
     --color-input-texto-dark-mode: #f0f0f0;
     --color-subtitle-dark-mode: #aaaaaa;
+
+    --color-neon-header: rgba(235, 154, 255, 0.842);
+    --color-line-header: rgba(0,0,0,.125);
+    --color-tb-header: #e9ecef #e9ecef #dee2e6;
+    /* Header oscuro variables */
+    --color-line-header-dark-mode: rgba(255,255,255,.125);
+    --color-neon-header-dark-mode: rgba(255, 0, 212, 0.623);
+    --color-tb-header-dark-mode: rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0);
 }
-/* Cuando el modo oscuro está activo, sobreescribe las variables principales */
-body.oscuro {
+/* Body modo oscuro */
+.oscuro {
     --color-principal: var(--color-principal-dark-mode);
     --color-secundario: var(--color-secundario-dark-mode);
     --color-texto: var(--color-texto-dark-mode);
@@ -67,6 +75,9 @@ body.oscuro {
     --color-input-border: var(--color-input-border-dark-mode);
     --color-input-texto: var(--color-input-texto-dark-mode);
     --color-subtitle: var(--color-subtitle-dark-mode);
+    --color-line-header: var(--color-line-header-dark-mode);
+    --color-neon-header: var(--color-neon-header-dark-mode);
+    --color-tb-header: var(--color-tb-header-dark-mode);
 }
 
 /* 2. Reset básico */
@@ -112,10 +123,6 @@ img {
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
-    }
-
-    .logo-container {
-        margin-bottom: 1rem;
     }
 }
 
@@ -211,27 +218,41 @@ p {
     }
 
 
-/* Header, footer y a:hover*/
+/* Header, footer y :hover*/
+/*Header background*/
 .bg-header {
   background-color: var(--color-principal) !important;
+  border-bottom-color: var(--color-line-header) !important;
 }
+
+/*Linea pequeña debajo del header para que quede bonito (a mi me gusta(yo eugexd))*/
 .header{
-  border-bottom: solid 1px white;
-  box-shadow: 0 8px 50px -5px white;
+  border-bottom: solid 8px var(--color-principal);
 }
 .logo-grande {
     width: 8rem;
     height: auto;
     margin-top: -20px;
 }
-
-.logo-tab:hover .logo-grande {
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+a.active{
+  color: var(--color-input-texto) !important;
 }
-
-
+.logo-tab:hover .logo-grande {
+    filter: drop-shadow(0 4px 10px var(--color-neon-header));
+}
+.nav-tabs .nav-link.active {
+  color: var(--color-texto) !important;
+  background-color: var(--color-principal) !important;
+}
+/*Modificaciones del border del tab activo de boostrap*/
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color:  var(--color-line-header)  var(--color-line-header)  rgba(0, 0, 0, 0) !important;
+}
+.nav-tabs .nav-link:hover {
+  border-color: var(--color-tb-header);
+}
 .card-header-tabs{
-  border-top: solid white 20px;
+  border-top: solid var(--color-principal) 20px;
 }
 .navbar-toggler{
   background-color: #ffb4c9;
@@ -275,7 +296,7 @@ a:hover {
 
 
 .lead{
-  color: white;
+  color: var(--color-texto);
 }
 /* =========================================
    2. Hero Banner (Texto superpuesto)
@@ -320,10 +341,7 @@ a:hover {
   font-size: 0.9rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-/* MODO OSCURO: bloque eliminado — la lógica completa está arriba en body.oscuro */
-
 /* Main.js estilos */
-
 #errorNombre,#errorEmail,#errorServicio {
   color: red;
   font-size: 14px;
