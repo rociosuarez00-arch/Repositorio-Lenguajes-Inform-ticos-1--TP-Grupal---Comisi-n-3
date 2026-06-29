@@ -3,10 +3,20 @@
 ========================== */
 
 const boton = document.getElementById("btn-modo");
-
+ 
+if (localStorage.getItem("modo") === "oscuro") {
+    document.body.classList.add("oscuro");
+}
 if (boton) {
     boton.addEventListener("click", () => {
         document.body.classList.toggle("oscuro");
+ 
+        /* Guardar el estado actual en localStorage para que persista entre páginas */
+        if (document.body.classList.contains("oscuro")) {
+            localStorage.setItem("modo", "oscuro");
+        } else {
+            localStorage.setItem("modo", "claro");
+        }
     });
 }
 

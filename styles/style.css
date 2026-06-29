@@ -1,7 +1,7 @@
 /* 1. Variables CSS */
 :root {
     /* Colores */
-    --color-principal: #080808;       /* negro para franja del logo */
+    --color-principal: #ffffff;       /* negro para franja del logo */
     --color-secundario: white; /* fondo general blanco */
     --color-texto: rgb(12, 12, 12);   /* texto principal */
     --color-enlace: #fcafe2;          /* enlaces */
@@ -22,6 +22,51 @@
     /* Espaciado */
     --margen-seccion: 2rem;
     --padding-general: 1rem;
+
+    /* Variables de componentes (modo claro por defecto) */
+    --color-container-bg: white;
+    --color-label: #333;
+    --color-input-bg: white;
+    --color-input-border: #ccc;
+    --color-input-texto: #000;
+    --color-subtitle: #777;
+
+    --color-principal-dark-mode: #1e1e1e;
+    --color-secundario-dark-mode: #121212;
+    --color-texto-dark-mode: #f0f0f0;
+    --color-enlace-dark-mode: #f48fb1;
+    --color-footer-dark-mode: #0a0a0a;
+
+    /* Colores de títulos por nivel */
+    --color-h1-dark-mode: #4dd0e1;
+    --color-h2-dark-mode: #69f0ae;
+    --color-h3-dark-mode: #e0e0e0;
+
+    /* Variables adicionales dark-mode para formularios, bordes y fondos */
+    --color-container-bg-dark-mode: #1e1e1e;
+    --color-label-dark-mode: #cccccc;
+    --color-input-bg-dark-mode: #2a2a2a;
+    --color-input-border-dark-mode: #555555;
+    --color-input-texto-dark-mode: #f0f0f0;
+    --color-subtitle-dark-mode: #aaaaaa;
+}
+/* Cuando el modo oscuro está activo, sobreescribe las variables principales */
+body.oscuro {
+    --color-principal: var(--color-principal-dark-mode);
+    --color-secundario: var(--color-secundario-dark-mode);
+    --color-texto: var(--color-texto-dark-mode);
+    --color-enlace: var(--color-enlace-dark-mode);
+    --color-footer: var(--color-footer-dark-mode);
+    --color-h1: var(--color-h1-dark-mode);
+    --color-h2: var(--color-h2-dark-mode);
+    --color-h3: var(--color-h3-dark-mode);
+    /* Variables adicionales para formularios y componentes */
+    --color-container-bg: var(--color-container-bg-dark-mode);
+    --color-label: var(--color-label-dark-mode);
+    --color-input-bg: var(--color-input-bg-dark-mode);
+    --color-input-border: var(--color-input-border-dark-mode);
+    --color-input-texto: var(--color-input-texto-dark-mode);
+    --color-subtitle: var(--color-subtitle-dark-mode);
 }
 
 /* 2. Reset básico */
@@ -78,95 +123,55 @@ img {
 section {
     padding: 20px;
 } 
-
-h1 {
-    color: var(--color-h1);
-    font-size: var(--tamano-h1);
-}
-h2 {
-    color: var(--color-h2);
-    font-size: var(--tamano-h2);
-}
 p {
     color: var(--color-texto);
     font-size: var(--tamano-texto);
 }
 
-/* Header, footer y a:hover*/
-.logo {
-    width: 15%;
-    margin-left: 1rem;
-}
-
-#footer {
-    background-color: var(--color-footer);
-    margin-top: 50px;
-}
-.redes-sociales {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.redes-sociales li {
-    list-style: none;
-    margin-right: 15px;
-}
-
-.redes-sociales li a {
-    text-decoration: none;
-}
-
-.redes-sociales li a i {
-    font-size: 30px;
-}
-a {
-    color: var(--color-enlace);
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-    color: var(--color-texto);
-}
- 
 /* formularios */
   
   /* estilo del contenedor del formulario*/
+    /* MODO OSCURO: background usa variable para cambiar en modo oscuro */
     .container{
       max-width: 700px;
       margin: auto;
-      background: white;
+      background: var(--color-container-bg);
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
   /* estilo para el subtítulo del formulario*/
+    /* MODO OSCURO: color usa variable para cambiar en modo oscuro */
     .subtitle{
       text-align: center;
-      color: #777;
+      color: var(--color-subtitle);
       margin-bottom: 25px;
     }
 
    /* estilos para las etiquetas y campos del formulario*/
+    /* MODO OSCURO: color usa variable para cambiar en modo oscuro */
     label{
       display: block;
       margin-top: 15px;
       font-weight: bold;
-      color: #333;
+      color: var(--color-label);
     }
 
    /* estilos para los campos de entrada, áreas de texto y selectores*/
+    /* MODO OSCURO: background, border y color usan variables para cambiar en modo oscuro */
     input,
     select,
     textarea{
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--color-input-border);
       border-radius: 8px;
       box-sizing: border-box;
       font-size: 14px;
+      background-color: var(--color-input-bg);
+      color: var(--color-input-texto);
     }
 
     /* permitir que el área de texto se redimensione verticalmente, pero no horizontalmente*/
@@ -206,24 +211,72 @@ a:hover {
     }
 
 
+/* Header, footer y a:hover*/
+.bg-header {
+  background-color: var(--color-principal) !important;
+}
+.header{
+  border-bottom: solid 1px white;
+  box-shadow: 0 8px 50px -5px white;
+}
+.logo-grande {
+    width: 8rem;
+    height: auto;
+    margin-top: -20px;
+}
 
-/* HEADER */
-.bg-secundario {
-    background-color: var(--color-principal) !important;
+.logo-tab:hover .logo-grande {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+
+.card-header-tabs{
+  border-top: solid white 20px;
+}
+.navbar-toggler{
+  background-color: #ffb4c9;
+}
+.navbar-toggler:hover{
+  background-color: #ff7ba0;
+}
+a {
+  color: var(--color-enlace) !important;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: underline !important;
+  color: var(--color-texto) !important;
 }
 .bg-principal {
-    background-color: var(--color-secundario) !important;
+  background-color: var(--color-secundario) !important;
+}
+.btn-modo {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--color-enlace) !important;
+    white-space: nowrap;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+ 
+.btn-modo:hover {
+    background-color: rgba(252, 175, 226, 0.15);
+    color: var(--color-texto) !important;
 }
 
-/*/* =========================================
-   1. Header Sticky (Fijado en la parte superior)
-   ========================================= */
-.custom-sticky-header {
-  position: sticky; /* Cumple: El elemento se queda visible al hacer scroll */
-  top: 0;           /* Se ancla al borde superior de la pantalla */
-  z-index: 1050;    /* Mantiene el header por encima del resto del contenido (Bootstrap usa 1050 para navbars) */
-}
 
+
+
+
+
+.lead{
+  color: white;
+}
 /* =========================================
    2. Hero Banner (Texto superpuesto)
    ========================================= */
@@ -267,10 +320,7 @@ a:hover {
   font-size: 0.9rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-body.oscuro { 
-background-color: #1a1a1a; 
-color: #f5f5f5; 
-}
+/* MODO OSCURO: bloque eliminado — la lógica completa está arriba en body.oscuro */
 
 /* Main.js estilos */
 
@@ -280,4 +330,3 @@ color: #f5f5f5;
   display: block;
   margin-top: 5px;
 }
-
