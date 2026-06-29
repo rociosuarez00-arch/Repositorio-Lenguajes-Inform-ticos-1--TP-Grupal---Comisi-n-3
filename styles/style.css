@@ -43,7 +43,7 @@
     --color-h3-dark-mode: #e0e0e0;
 
     /* Variables adicionales dark-mode para formularios, bordes y fondos */
-    --color-container-bg-dark-mode: #1e1e1e;
+    --color-container-bg-dark-mode: #00000033;
     --color-label-dark-mode: #cccccc;
     --color-input-bg-dark-mode: #2a2a2a;
     --color-input-border-dark-mode: #555555;
