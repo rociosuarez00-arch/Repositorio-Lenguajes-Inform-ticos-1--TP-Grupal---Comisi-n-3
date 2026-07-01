@@ -33,37 +33,41 @@ btnModoMobile.addEventListener("click", () => {
 const nombre = document.getElementById("nombreApellido");
 const error = document.getElementById("errorNombre");
 
-function validarNombre() {
+if (nombre && error) {
 
-    const valor = nombre.value.trim();
-    const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    function validarNombre() {
 
-    error.textContent = "";
-    nombre.style.border = "";
+        const valor = nombre.value.trim();
+        const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
 
-    if (valor === "") {
-        error.textContent = "Debe ingresar el nombre y apellido.";
-        nombre.style.border = "2px solid red";
-        return false;
+        error.textContent = "";
+        nombre.style.border = "";
+
+        if (valor === "") {
+            error.textContent = "Debe ingresar el nombre y apellido.";
+            nombre.style.border = "2px solid red";
+            return false;
+        }
+
+        if (!regex.test(valor)) {
+            error.textContent = "No se permiten números.";
+            nombre.style.border = "2px solid red";
+            return false;
+        }
+
+        if (valor.split(/\s+/).length < 2) {
+            error.textContent = "Debe ingresar nombre y apellido.";
+            nombre.style.border = "2px solid red";
+            return false;
+        }
+
+        return true;
     }
 
-    if (!regex.test(valor)) {
-        error.textContent = "No se permiten números.";
-        nombre.style.border = "2px solid red";
-        return false;
-    }
+    nombre.addEventListener("input", validarNombre);
+    nombre.addEventListener("blur", validarNombre);
 
-    if (valor.split(/\s+/).length < 2) {
-        error.textContent = "Debe ingresar nombre y apellido.";
-        nombre.style.border = "2px solid red";
-        return false;
-    }
-
-    return true;
 }
-
-nombre.addEventListener("input", validarNombre);
-nombre.addEventListener("blur", validarNombre);
 
 /* ==========================
    VALIDACIÓN DEL EMAIL
@@ -72,51 +76,55 @@ nombre.addEventListener("blur", validarNombre);
 const email = document.getElementById("email");
 const errorEmail = document.getElementById("errorEmail");
 
-function validarEmail() {
+if (email && errorEmail) {
+    function validarEmail() {
 
-    const patron = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com|live\.com)$/;
+        const patron = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com|live\.com)$/;
 
-    errorEmail.textContent = "";
-    email.style.border = "";
+        errorEmail.textContent = "";
+        email.style.border = "";
 
-    if (email.value.trim() === "") {
-        errorEmail.textContent = "Debe ingresar un correo electrónico.";
-        email.style.border = "2px solid red";
-        return false;
+        if (email.value.trim() === "") {
+            errorEmail.textContent = "Debe ingresar un correo electrónico.";
+            email.style.border = "2px solid red";
+            return false;
+        }
+
+        if (!patron.test(email.value.trim())) {
+            errorEmail.textContent = "Solo se permiten correos Gmail, Hotmail, Outlook o Live.";
+            email.style.border = "2px solid red";
+            return false;
+        }
+
+        return true;
     }
 
-    if (!patron.test(email.value.trim())) {
-        errorEmail.textContent = "Solo se permiten correos Gmail, Hotmail, Outlook o Live.";
-        email.style.border = "2px solid red";
-        return false;
-    }
-
-    return true;
+    email.addEventListener("input", validarEmail);
+    email.addEventListener("blur", validarEmail);
 }
-
-email.addEventListener("input", validarEmail);
-email.addEventListener("blur", validarEmail);
 
 /* ==========================
    ENVÍO DEL FORMULARIO
 ========================== */
 
 const formulario = document.getElementById("formulario");
+if(formulario){
 
-formulario.addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    if (validarNombre() && validarEmail()) {
-
-        alert("Gracias por ayudar a los gatos 🐾");
-
-        formulario.reset();
-
-        setTimeout(function () {
-            window.location.href = "programas.html";
-        }, 5000);
-
-    }
-
-});
+    formulario.addEventListener("submit", function (e) {
+        
+        e.preventDefault();
+        
+        if (validarNombre() && validarEmail()) {
+            
+            alert("Gracias por ayudar a los gatos 🐾");
+            
+            formulario.reset();
+            
+            setTimeout(function () {
+                window.location.href = "programas.html";
+            }, 5000);
+            
+        }
+        
+    });
+}
