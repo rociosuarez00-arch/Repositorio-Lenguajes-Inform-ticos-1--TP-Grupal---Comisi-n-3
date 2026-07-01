@@ -18,7 +18,7 @@
   --color-input-texto: #000;
   --color-subtitle: #777;
   /* Variables para remplazar algunos colores en el header del bootstrap*/
-  --color-neon-header: rgba(235, 154, 255, 0.842);
+  --color-neon-header: pink;
   --color-line-header: rgba(0,0,0,.125);
   --color-tb-header: #e9ecef #e9ecef #dee2e6;
   /* Color para botón*/
@@ -46,7 +46,7 @@
   --color-h2-dark-mode: lightblue;
   --color-h3-dark-mode: #e0e0e0;
   /* Variables de componentes*/
-  --color-container-bg-dark-mode: #00000033;
+  --color-container-bg-dark-mode: #0000001c;
   --color-label-dark-mode: #cccccc;
   --color-input-bg-dark-mode: #2a2a2a;
   --color-input-border-dark-mode: #555555;
@@ -97,17 +97,33 @@ body {
   line-height: 1.5;
 }
 /* 4. Encabezados */
-h1 { font-size: var(--tamano-h1); color: var(--color-h1); }
-h2 { font-size: var(--tamano-h2); color: var(--color-h2); }
-h3 { font-size: var(--tamano-h3); color: var(--color-h3); }
+h1{
+  font-size: var(--tamano-h1);
+  color: var(--color-h1); 
+  font-weight: bold;
+}
+h1:hover{
+  text-shadow: 0px 4px 12px var(--color-neon-header);
+}
+h2{
+  font-size: var(--tamano-h2);
+  color: var(--color-h2); 
+}
+h3{ 
+  font-size: var(--tamano-h3);
+  color: var(--color-h3);
+}
 /* 6. Listas básicas */
-ul, ol {
+ul, ol{
   padding-left: 1.5rem;
 }
 /* 7. Imágenes responsive */
 img {
   max-width: 100%;
   height: auto;
+}
+.banner{
+ width: 100%;
 }
 /* Responsive: menú vertical en pantallas pequeñas */
 @media (max-width: 768px) {
@@ -124,6 +140,14 @@ section {
   position: relative;
   padding: 2rem;
 } 
+/*estilo del mapa*/
+.mapa iframe {
+  width: 380px;
+  max-width: 380px;
+  height: 260px;
+  box-shadow: 0 2px 6px var(--color-enlace);
+  margin: 1rem auto 1rem auto;
+}
 .list-group-item{
   color: var(--color-texto);
   border: 1px solid rgba(255, 255, 255, 0) !important;
@@ -131,6 +155,10 @@ section {
 p {
   color: var(--color-texto);
   font-size: var(--tamano-texto);
+margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 /* estilo del contenedor del section en nosotros.html*/
 .nosotros-container{
@@ -140,7 +168,7 @@ p {
   background: var(--color-container-bg);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.438);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.199);
 }
 /* formularios */
 
@@ -153,9 +181,16 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.438);
 }
+.form-container{
+  margin-top: 1rem;
+}
 /*Arregla card de bootstrap en el modo oscurdo*/
 .card{
-  background-color: var(--color-secundario);
+  border: 1px solid var(--color-texto) !important;
+  background-color: transparent;
+}
+.card-body{
+  border: 1px solid var(--color-texto) !important;
 }
 /* estilo para el subtítulo del formulario*/
 .subtitle{
@@ -467,6 +502,7 @@ a.btn-primary:hover,a.btn-secondary:hover {
 .btn-outline{
   border-color: var(--color-enlace);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 a.btn-outline:hover{
   border-color: var(--color-boton-click);
