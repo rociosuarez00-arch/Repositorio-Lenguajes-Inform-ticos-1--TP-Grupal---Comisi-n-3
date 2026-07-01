@@ -1,221 +1,220 @@
 /* 1. Variables CSS */
 :root {
-    /* Colores */
-    --color-principal: white;       /* negro para franja del logo */
-    --color-secundario: white; /* fondo general blanco */
-    --color-texto: black;   /* texto principal */
-    --color-enlace: #fcafe2;          /* enlaces */
-    --color-footer: #222222;          /* fondo del footer */
+  /* Colores */
+  --color-principal: white;       /* negro para franja del logo */
+  --color-secundario: white; /* fondo general blanco */
+  --color-texto: black;   /* texto principal */
+  --color-enlace: #ff8ea1;          /* enlaces */
 
-    /* Colores de títulos por nivel */
-    --color-h1: #35bdcf;
-    --color-h2: #5be97f;
-    --color-h3: #080808;
+  /* Colores de títulos por nivel */
+  --color-h1: pink;
+  --color-h2: lightblue;
+  --color-h3: #080808;
+  /* Variables de componentes*/
+  --color-container-bg: white;
+  --color-label: #333;
+  --color-input-bg: white;
+  --color-input-border: #ccc;
+  --color-input-texto: #000;
+  --color-subtitle: #777;
+  /* Variables para remplazar algunos colores en el header del bootstrap*/
+  --color-neon-header: rgba(235, 154, 255, 0.842);
+  --color-line-header: rgba(0,0,0,.125);
+  --color-tb-header: #e9ecef #e9ecef #dee2e6;
+  /* Color para botón*/
+  --color-boton: rgb(255, 146, 164);
+  --color-boton-click: rgb(255, 100, 191);
+  /* Tipografía */
+  --fuente-principal: 'Roboto', sans-serif;
+  --tamano-h1: 2.5rem;
+  --tamano-h2: 2rem;
+  --tamano-h3: 1.5rem;
+  --tamano-texto: 1rem;
+  /* Espaciado */
+  --margen-seccion: 2rem;
+  --padding-general: 1rem;
 
-    /* Tipografía */
-    --fuente-principal: 'Roboto', sans-serif;
-    --tamano-h1: 2.5rem;
-    --tamano-h2: 2rem;
-    --tamano-h3: 1.5rem;
-    --tamano-texto: 1rem;
-
-    /* Espaciado */
-    --margen-seccion: 2rem;
-    --padding-general: 1rem;
-
-    /* Variables de componentes (modo claro por defecto) */
-    --color-container-bg: white;
-    --color-label: #333;
-    --color-input-bg: white;
-    --color-input-border: #ccc;
-    --color-input-texto: #000;
-    --color-subtitle: #777;
-
-    --color-principal-dark-mode: #1e1e1e;
-    --color-secundario-dark-mode: #1e1e1e;;
-    --color-texto-dark-mode: #f0f0f0;
-    --color-enlace-dark-mode: #f48fb1;
-    --color-footer-dark-mode: #0a0a0a;
-
-    /* Colores de títulos por nivel */
-    --color-h1-dark-mode: #4dd0e1;
-    --color-h2-dark-mode: #69f0ae;
-    --color-h3-dark-mode: #e0e0e0;
-
-    /* Variables adicionales dark-mode para formularios, bordes y fondos */
-    --color-container-bg-dark-mode: #00000033;
-    --color-label-dark-mode: #cccccc;
-    --color-input-bg-dark-mode: #2a2a2a;
-    --color-input-border-dark-mode: #555555;
-    --color-input-texto-dark-mode: #f0f0f0;
-    --color-subtitle-dark-mode: #aaaaaa;
-
-    --color-neon-header: rgba(235, 154, 255, 0.842);
-    --color-line-header: rgba(0,0,0,.125);
-    --color-tb-header: #e9ecef #e9ecef #dee2e6;
-    /* Header oscuro variables */
-    --color-line-header-dark-mode: rgba(255,255,255,.125);
-    --color-neon-header-dark-mode: rgba(255, 0, 212, 0.623);
-    --color-tb-header-dark-mode: rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0);
+  /* Variables modo-oscuro */
+  /* Variables modo-oscuro */
+  /* Colores */
+  --color-principal-dark-mode: #1e1e1e;
+  --color-secundario-dark-mode: #1e1e1e;;
+  --color-texto-dark-mode: #f0f0f0;
+  --color-enlace-dark-mode: pink;
+  /* Colores de títulos por nivel */
+  --color-h1-dark-mode: pink;
+  --color-h2-dark-mode: lightblue;
+  --color-h3-dark-mode: #e0e0e0;
+  /* Variables de componentes*/
+  --color-container-bg-dark-mode: #00000033;
+  --color-label-dark-mode: #cccccc;
+  --color-input-bg-dark-mode: #2a2a2a;
+  --color-input-border-dark-mode: #555555;
+  --color-input-texto-dark-mode: #f0f0f0;
+  --color-subtitle-dark-mode: #aaaaaa;
+  /* Variables para remplazar algunos colores en el header del bootstrap*/
+  --color-line-header-dark-mode: rgba(255,255,255,.125);
+  --color-neon-header-dark-mode: rgba(255, 0, 212, 0.623);
+  --color-tb-header-dark-mode: rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0.075) rgba(255, 255, 255, 0);
+  /* Color para botón*/
+  --color-boton-dark-mode: rgb(255, 146, 164);
+  --color-boton-click-dark-mode: rgb(255, 111, 135);
 }
-/* Body modo oscuro */
+/*Comportamiento modo-oscuro*/
 .oscuro {
-    --color-principal: var(--color-principal-dark-mode);
-    --color-secundario: var(--color-secundario-dark-mode);
-    --color-texto: var(--color-texto-dark-mode);
-    --color-enlace: var(--color-enlace-dark-mode);
-    --color-footer: var(--color-footer-dark-mode);
-    --color-h1: var(--color-h1-dark-mode);
-    --color-h2: var(--color-h2-dark-mode);
-    --color-h3: var(--color-h3-dark-mode);
-    /* Variables adicionales para formularios y componentes */
-    --color-container-bg: var(--color-container-bg-dark-mode);
-    --color-label: var(--color-label-dark-mode);
-    --color-input-bg: var(--color-input-bg-dark-mode);
-    --color-input-border: var(--color-input-border-dark-mode);
-    --color-input-texto: var(--color-input-texto-dark-mode);
-    --color-subtitle: var(--color-subtitle-dark-mode);
-    --color-line-header: var(--color-line-header-dark-mode);
-    --color-neon-header: var(--color-neon-header-dark-mode);
-    --color-tb-header: var(--color-tb-header-dark-mode);
-}
-
+  --color-principal: var(--color-principal-dark-mode);
+  --color-secundario: var(--color-secundario-dark-mode);
+  --color-texto: var(--color-texto-dark-mode);
+  --color-enlace: var(--color-enlace-dark-mode);
+  --color-h1: var(--color-h1-dark-mode);
+  --color-h2: var(--color-h2-dark-mode);
+  --color-h3: var(--color-h3-dark-mode);
+  /* Variables adicionales para formularios y componentes */
+  --color-container-bg: var(--color-container-bg-dark-mode);
+  --color-label: var(--color-label-dark-mode);
+  --color-input-bg: var(--color-input-bg-dark-mode);
+  --color-input-border: var(--color-input-border-dark-mode);
+  --color-input-texto: var(--color-input-texto-dark-mode);
+  --color-subtitle: var(--color-subtitle-dark-mode);
+  --color-line-header: var(--color-line-header-dark-mode);
+  --color-neon-header: var(--color-neon-header-dark-mode);
+  --color-tb-header: var(--color-tb-header-dark-mode);
+  --color-boton: var(--color-boton-dark-mode);
+  --color-boton-click: var(--color-boton-click-dark-mode);
+  }
 /* 2. Reset básico */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 /* 3. Tipografía global y body */
 body {
-    font-family: var(--fuente-principal);
-    font-size: var(--tamano-texto);
-    color: var(--color-texto);
-    background-color: var(--color-secundario);
-    line-height: 1.5;
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-texto);
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
+  line-height: 1.5;
 }
-
 /* 4. Encabezados */
 h1 { font-size: var(--tamano-h1); color: var(--color-h1); }
 h2 { font-size: var(--tamano-h2); color: var(--color-h2); }
 h3 { font-size: var(--tamano-h3); color: var(--color-h3); }
-
-
 /* 6. Listas básicas */
 ul, ol {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
-
 /* 7. Imágenes responsive */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 /* Responsive: menú vertical en pantallas pequeñas */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
+  .footer-redes{
+    flex-direction: row;
+  }
+  .footer-contenedor{
+    grid-template-columns: 1fr 2fr !important;
+  }
 }
 
 /*Parte de Iara*/
 section {
-    padding: 20px;
+  position: relative;
+  padding: 2rem;
 } 
+.list-group-item{
+  color: var(--color-texto);
+  border: 1px solid rgba(255, 255, 255, 0) !important;
+}
 p {
-    color: var(--color-texto);
-    font-size: var(--tamano-texto);
+  color: var(--color-texto);
+  font-size: var(--tamano-texto);
+}
+/* estilo del contenedor del section en nosotros.html*/
+.nosotros-container{
+  position: relative;
+  max-width: 90%;
+  margin: 2rem auto 2rem auto;
+  background: var(--color-container-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.438);
+}
+/* formularios */
+
+/* estilo del contenedor del formulario*/
+.container{
+  max-width: 44rem;
+  margin: 2rem auto 2rem auto;
+  background: var(--color-container-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.438);
+}
+/*Arregla card de bootstrap en el modo oscurdo*/
+.card{
+  background-color: var(--color-secundario);
+}
+/* estilo para el subtítulo del formulario*/
+.subtitle{
+  text-align: center;
+  color: var(--color-subtitle);
+  margin-bottom: 25px;
+}
+/* estilos para las etiquetas y campos del formulario*/
+label{
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--color-label);
+}
+/* estilos para los campos de entrada, áreas de texto y selectores*/
+input, select, textarea{
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--color-input-border);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: var(--color-input-bg);
+  color: var(--color-input-texto);
+}
+/* permitir que el área de texto se redimensione verticalmente, pero no horizontalmente*/
+textarea{
+  resize: vertical;
+}
+/* estilos para el grupo de botones de opción */
+.radio-group{
+  margin-top: 10px;
+}
+/* estilos para las etiquetas dentro del grupo de botones de opción */
+.radio-group label{
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
 }
 
-/* formularios */
-  
-  /* estilo del contenedor del formulario*/
-    /* MODO OSCURO: background usa variable para cambiar en modo oscuro */
-    .container{
-      max-width: 700px;
-      margin: auto;
-      background: var(--color-container-bg);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+/* estilos para los botones de opción */
+button{
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: var(--color-boton);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-  /* estilo para el subtítulo del formulario*/
-    /* MODO OSCURO: color usa variable para cambiar en modo oscuro */
-    .subtitle{
-      text-align: center;
-      color: var(--color-subtitle);
-      margin-bottom: 25px;
-    }
-
-   /* estilos para las etiquetas y campos del formulario*/
-    /* MODO OSCURO: color usa variable para cambiar en modo oscuro */
-    label{
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: var(--color-label);
-    }
-
-   /* estilos para los campos de entrada, áreas de texto y selectores*/
-    /* MODO OSCURO: background, border y color usan variables para cambiar en modo oscuro */
-    input,
-    select,
-    textarea{
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid var(--color-input-border);
-      border-radius: 8px;
-      box-sizing: border-box;
-      font-size: 14px;
-      background-color: var(--color-input-bg);
-      color: var(--color-input-texto);
-    }
-
-    /* permitir que el área de texto se redimensione verticalmente, pero no horizontalmente*/
-    textarea{
-      resize: vertical;
-    }
-
-   /* estilos para el grupo de botones de opción */
-    .radio-group{
-      margin-top: 10px;
-    }
-
-    /* estilos para las etiquetas dentro del grupo de botones de opción */
-    .radio-group label{
-      display: inline-block;
-      margin-right: 20px;
-      font-weight: normal;
-    }
-
-    /* estilos para los botones de opción */
-    button{
-      width: 100%;
-      margin-top: 25px;
-      padding: 14px;
-      background: #ff7b54;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    /* efecto hover para el botón de envío */
-    button:hover{
-      background: #ff6333;
-    }
+/* efecto hover para el botón de envío */
+button:hover{
+  background: var(--color-boton-click);
+}
 
 
 /* Header, footer y :hover*/
@@ -229,22 +228,30 @@ p {
 .header{
   border-bottom: solid 8px var(--color-principal);
 }
-.logo-grande {
+.logo {
     width: 8rem;
     height: auto;
-    margin-top: -20px;
+    margin-top: -22px;
+    margin-right: 20px;
 }
+.logo:hover {
+    filter: drop-shadow(0 -4px 6px var(--color-neon-header));
+}
+li.nav-item{
+  text-align: center;
+  margin-top: 10px;
+}
+
 a.active{
   color: var(--color-input-texto) !important;
+  background-color: rgba(0, 0, 0, 0.187);
 }
-.logo-tab:hover .logo-grande {
-    filter: drop-shadow(0 4px 10px var(--color-neon-header));
-}
+
 .nav-tabs .nav-link.active {
   color: var(--color-texto) !important;
   background-color: var(--color-principal) !important;
 }
-/*Modificaciones del border del tab activo de boostrap*/
+/*Modificaciones del border del tab activo de bootstrap*/
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     border-color:  var(--color-line-header)  var(--color-line-header)  rgba(0, 0, 0, 0) !important;
 }
@@ -265,46 +272,163 @@ a {
   text-decoration: none !important;
 }
 a:hover {
-  text-decoration: underline !important;
-  color: var(--color-texto) !important;
+  color: var(--color-boton-click) !important;
+  font-weight: bold;
 }
 .bg-principal {
   background-color: var(--color-secundario) !important;
 }
+/* Button modo-oscuro responsivo*/
+.btn-modo-mobile{
+    all: unset;
+    position: relative;
+    width: 3rem;
+    height: 1.4rem;
+    border: 2px solid var(--color-texto);
+    border-radius: 2em;
+}
+.btn-modo-mobile::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 0.15rem;
+    left: 0.15rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-texto);
+    transition: left 300ms;
+}
+.oscuro .btn-modo-mobile::after {
+    left: 1.6rem;
+}
+.btn-modo-mobile:hover {
+  background-color: #00000000;
+}
 .btn-modo {
     all: unset;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.85rem;
-    color: var(--color-enlace) !important;
-    white-space: nowrap;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    transition: background 0.2s ease, color 0.2s ease;
+    position: relative;
+    width: 3rem;
+    height: 1.4rem;
+    border: 2px solid var(--color-texto);
+    border-radius: 2em;
+    margin-left: 1rem;
 }
- 
+.btn-modo::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 0.15rem;
+    left: 0.15rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-texto);
+    transition: left 300ms;
+}
+.oscuro .btn-modo::after {
+    left: 1.6rem;
+}
 .btn-modo:hover {
-    background-color: rgba(252, 175, 226, 0.15);
-    color: var(--color-texto) !important;
+  background-color: #00000000;
 }
 
 
+/* Fondo y tipografía general del footer */
+.footer{
+  border-top: 1px solid var(--color-input-border);
+  background-color: var(--color-principal);
+  padding: 2rem 2rem 0rem;
+}
 
-
-
-
-.lead{
+.footer h2{
+  font-size: 1.5rem;
+  font-weight: bold;
   color: var(--color-texto);
 }
+
+/* Textos secundarios en gris */
+.footer p{
+  color: var(--color-texto);
+  font-size: 1rem;
+}
+
+/* Grilla de 4 columnas */
+.footer-contenedor {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 2.4fr;
+  margin-bottom: 1rem;
+}
+
+.footer-eslogan{
+  max-width: 20rem;
+  margin-bottom: 3rem;
+}
+
+/* Listas sin estilos */
+.footer-redes,
+.footer-derechos ul,
+.footer-enlaces{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Redes en fila */
+.footer-redes{
+  display: flex;
+}
+
+/* Círculo para cada ícono de red social */
+.icono-redes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--color-input-border);
+  font-size: 1rem;
+}
+
+/* Input y botón en fila */
+.footer-form{
+  display: flex; 
+  margin-bottom: 0.8rem;
+}
+
+/* Les da la misma altura al input y el botón */
+.footer-form input,
+.footer-form button,
+.boton-donar {
+  margin-top: 0px;
+}
+
+/* Barra legal: copyright a la izquierda, terminos y privacidad a la derecha */
+.footer-derechos{
+  background-color: var(--color-principal);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-input-border);
+/*Pongo esto de abajo porque no se me ocurre otra manera para que quede bien la linea. porque sino queda dentro del bloque footer y no ocupa la pantalla.*/
+  padding-top: 1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer-derechos ul, 
+.footer-derechos a{
+  display: flex;
+  margin: 0px 1rem 0px;
+}
+
+
 /* =========================================
-   2. Hero Banner (Texto superpuesto)
-   ========================================= */
+2. Hero Banner (Texto superpuesto)
+========================================= */
 .custom-hero-container {
   position: relative; /* Cumple: Contenedor padre con position relative */
   width: 100%;
-  overflow: hidden;
 }
 
 .custom-hero-overlay {
@@ -323,12 +447,34 @@ a:hover {
 }
 
 /* =========================================
-   3. Badges e Íconos sobre imágenes
+   3. Badges, Íconos sobre imágenes y botones
    ========================================= */
+a.btn-primary,a.btn-secondary {
+  color: var(--color-texto) !important;
+}
+a.btn-primary:hover,a.btn-secondary:hover {
+  color: var(--color-texto) !important;
+  text-decoration: none !important;
+}
+.btn-primary,.btn-secondary {
+  background-color: var(--color-boton);
+  border-color: var(--color-boton);
+}
+.btn-primary:hover,.btn-secondary:hover {
+  background-color: var(--color-boton-click);
+  border-color: var(--color-boton-click);
+}
+.btn-outline{
+  border-color: var(--color-enlace);
+  margin-top: 1rem;
+}
+a.btn-outline:hover{
+  border-color: var(--color-boton-click);
+  text-decoration: none !important;
+}
 .custom-image-wrapper {
   position: relative; /* El contenedor de la imagen ES el ancla para el badge */
 }
-
 .custom-badge {
   position: absolute; /* Cumple: Etiqueta superpuesta a la imagen usando absolute */
   top: 15px;          /* Distancia desde arriba */

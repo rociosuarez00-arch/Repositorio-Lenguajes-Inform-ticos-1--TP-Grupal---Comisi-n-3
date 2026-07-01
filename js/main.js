@@ -2,20 +2,28 @@
    MODO OSCURO
 ========================== */
 
+// Si está guardado como "modo"==="oscuro", se pone la clase "oscuro" en el body
+if (localStorage.getItem("modo") === "oscuro") {
+    document.body.classList.add("oscuro");
+}
 // Buscamos el botón en el HTML usando su id ("btn-modo").
 const btnModo = document.getElementById("btn-modo");
-
 // Le decimos al botón: "cuando te hagan click, ejecutá esto".
 btnModo.addEventListener("click", () => {
-
   // toggle alterna la clase "oscuro" en el body:
   // si no está, la agrega; si ya está, la saca.
-  document.body.classList.toggle("oscuro");
-
-  // Preguntamos si el modo oscuro quedó activado (true o false)
-  // para cambiar el texto del botón según corresponda.
-  const modoActivo = document.body.classList.contains("oscuro");
-  btnModo.textContent = modoActivo ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    document.body.classList.toggle("oscuro");
+    // Preguntamos si el modo oscuro quedó activado (true o false)
+    // para cambiar el texto del botón según corresponda. (En este caso no pongo nada)
+    const modoActivo = document.body.classList.contains("oscuro");
+    btnModo.textContent = modoActivo ? "" : "";
+    // Mantener localmente el modo oscuro
+    localStorage.setItem("modo", modoActivo ? "oscuro" : "claro");
+});
+/* Segundo botón modo oscuro. Para menú mobile */
+const btnModoMobile = document.getElementById("btn-modo-mobile");
+btnModoMobile.addEventListener("click", () => {
+        btnModo.click();
 });
 
 /* ==========================
